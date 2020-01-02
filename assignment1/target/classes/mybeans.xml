@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+	<bean id="teacherBean" class="assignment1.model.Teacher">
+		
+		<constructor-arg name="name" type="String"
+			value="Anne Sullivan ">
+		</constructor-arg>
+		<property name="std1" ref="std1Bean"></property>
+		
+		<property name="std2" ref="std2Bean"></property>
+		
+	</bean>
+	<bean id="std1Bean" class="assignment1.model.Student1">
+		<constructor-arg name="stdNo" type="Integer"
+			value="11111"></constructor-arg>
+		<constructor-arg name="stdName" type="String"
+			value="Daniil Pavlenko"></constructor-arg>
+	</bean>
+	<bean id="std2Bean" class="assignment1.model.Student2">
+		<constructor-arg name="stdNo" type="Integer"
+			value="22222"></constructor-arg>
+		<constructor-arg name="stdName" type="String"
+			value="John Doe"></constructor-arg>
+	</bean>
+</beans>
